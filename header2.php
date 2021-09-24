@@ -129,8 +129,7 @@
 							?>
 							<div class="brands-name" style="border:0px;">
 								<ul class="nav nav-pills nav-stacked">
-									
-								<li><a href="shop.php?b_id=<?php echo $b_id;?>" style="background:#111111;color:white;"><span class="pull-right">(<?php echo $count_num; ?>)</span><?php echo $b_title; ?></a></li>
+									<li><a href="shop.php?b_id=<?php echo $b_id;?>" style="background:#111111;color:white;"><span class="pull-right">(<?php echo $count_num; ?>)</span><?php echo $b_title; ?></a></li>
 									
 								</ul>
 							</div>
@@ -163,15 +162,7 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 							<li><a href="<?php echo $nav ?>.php"><i class="fa fa-user"></i> <?php echo $user; ?></a></li>
-							<?php  
-										if(!isset($_SESSION['email'])){
-											echo '	<li><a href="login.php"><i class="fa fa-shopping-cart"></i> Cart&nbsp;<span class="badge" >0</span></a></li>
-											';
-										}else{
-
-						echo '	 <li><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart&nbsp;<span class="badge" id="count">0</span></a></li>';
-									}
-							?>
+							<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart&nbsp;<span class="badge" id="count">0</span></a></li>
 							<!--<?php
 							if(isset($_SESSION['email'])){?>
 
@@ -221,7 +212,7 @@
 					<div class="col-sm-3">
 						<div class="search_box  pull-right">
 						
-							<input type="text" placeholder="Search" id="search" required>
+							<input type="text" placeholder="Search" id="search" required="required">
 						<a href="javascript:void(0)" class="btn btn-info" style="position:relative;right:2px;" id="search_btn"><span class="glyphicon glyphicon-search"></span></a>
 						
 						</div>
@@ -240,7 +231,7 @@
 	
 	$("#search_btn").on("click",function(){
 		var search = $("#search").val();
-		window.location = 'search.php?search=' + search;
+		window.location = 'search_offer.php?search=' + search;
 	});
 	</script>
 	<script>
